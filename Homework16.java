@@ -20,14 +20,17 @@ public class Homework16 {
 	}
 
 	/* Recursively find the minimum value in the given
-	 * array.
+	 * array. Call the second method from the first
+	 * (this is an example of helper method)
 	 * Hint - Compare the minimum value in the first half
 	 * of the array with the minimum value in the second
-	 * half of the array. You will either need to create
-	 * a second method that takes in the array and start
-	 * and end indexes
+	 * half of the array
 	 */
 	public static int problem3(int[] arr) {
+
+	}
+
+	private static int problem3(int[] arr, int start, int end) {
 
 	}
 
