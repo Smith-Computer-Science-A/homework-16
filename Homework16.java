@@ -1,91 +1,91 @@
+import java.util.ArrayList;
+
 public class Homework16 {
 
-	/* This problem should calculate and return the value
-	 * of a times b recursively. You cannot use the *
-	 * symbol in your solution. Remember that
-	 * multiplication is repeated addition
+	/* This problem should create and return an ArrayList
+	 * that can hold Strings
 	 */
-	public static int problem1(int a, int b) {
+	public static ArrayList<String> problem1() {
 
 	}
 
-	/* This problem should calculate and return the value
-	 * of a to the b power recursively. You cannot use
-	 * Math.pow or the * symbol in your solution. You
-	 * should use problem1. Remember that
-	 * exponentiation is repeated multiplication
+	/* This problem should add s to the beginning of l
 	 */
-	public static int problem2(int a, int b) {
+	public static void problem2(ArrayList<String> l, String s) {
 
 	}
 
-	/* Recursively find the minimum value in the given
-	 * array. Call the second method from the first
-	 * (this is an example of helper method)
-	 * Hint - Compare the minimum value in the first half
-	 * of the array with the minimum value in the second
-	 * half of the array
+	/* This problem should create and return an exact copy of l.
 	 */
-	public static int problem3(int[] arr) {
+	public static ArrayList<String> problem3(ArrayList<String> l) {
 
 	}
 
-	private static int problem3(int[] arr, int start, int end) {
+	/* This problem should remove all of the elements from l. You can only
+	 * use the remove method for the ArrayList class to receive credit.
+	 */
+	public static int problem4(ArrayList<String> l) {
 
 	}
 
-	/* Recursively find the sum of the digits of
-	 * the given number.
-	 * Hint - The least significant digit is num % 10
-	 * and the remaining numbers are num / 10
+	/* This problem should add all of the elements from l2 to l1. Note that
+	 * l2 holds Integers but l1 holds Strings; account for that
 	 */
-	public static int problem4(int num) {
-
-	}
-
-	/* We have bunnies standing in a line,
-	 * numbered 1, 2, ... The odd bunnies (1, 3, ..)
-	 * have the normal 2 ears. The even bunnies (2, 4, ..)
-	 * we'll say have 3 ears, because they each have a
-	 * raised foot. Recursively return the number of "ears"
-	 * in the bunny line 1, 2, ... n
-	 * (recursively, without loops or multiplication).
-	 *
-	 * problem5(0) → 0
-	 * problem5(1) → 2
-	 * problem5(2) → 5
-	 */
-	 public static int problem5(int bunnies) {
+	 public static void problem5(ArrayList<String> l1, ArrayList<Integer> l2) {
 
 	 }
 
 	 public static void main(String[] args) {
 		 boolean passed = true;
 
-		 if (problem1(6, 4) != 24) {
-			 System.out.println("Fail 1");
+		 ArrayList<String> l = problem1();
+		 System.out.println("Pass 1");
+
+		 problem2(l, "a");
+		 problem2(l, "b");
+		 problem2(l, "c");
+		 if (!l.get(0).equals("c")) {
+			 System.out.println("Fail 2.1");
 			 passed = false;
+		 } else if (!l.get(2).equals("a")) {
+			 System.out.println("Fail 2.2");
+			 passed = false;
+		 } else {
+			 System.out.println("Pass 2");
 		 }
 
-		 if (problem2(5, 3) != 125) {
-			 System.out.println("Fail 2");
+		 ArrayList<String> m = prolem3(l);
+		 if (!l.get(1).equals(m.get(1))) {
+			 System.out.println("Fail 3.1");
 			 passed = false;
+		 } else if (l == m) {
+			 System.out.println("Fail 3.2");
+			 passed = false;
+		 } else {
+			 System.out.println("Pass 3");
 		 }
 
-		 int[] arr = {4, 5, 2, 6, 3, 6, 7, 8};
-		 if (problem3(arr) != 2) {
-			 System.out.println("Fail 3");
-			 passed = false;
-		 }
-
-		 if (problem4(275) != 14) {
+		 problem4(l);
+		 if (l.size() != 0) {
 			 System.out.println("Fail 4");
 			 passed = false;
+		 } else {
+			 System.out.println("Pass 4");
 		 }
 
-		 if (problem5(10) != 25) {
-			 System.out.println("Fail 5");
+		 ArrayList<Integer> n = new ArrayList<Integer>();
+		 for (int i = 0; i < 6; i++) {
+			 n.add(i);
+		 }
+		 problem5(m, n);
+		 if (m.get(3) != "0") {
+			 System.out.println("Fail 5.1");
 			 passed = false;
+		 } else if (m.get(8) != "5") {
+			 System.out.println("Fail 5.2");
+			 passed = false;
+		 } else {
+			 System.out.println("Pass");
 		 }
 
 		 if (passed) {
