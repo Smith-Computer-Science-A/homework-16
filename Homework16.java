@@ -24,7 +24,7 @@ public class Homework16 {
 	/* This problem should remove all of the elements from l. You can only
 	 * use the remove method for the ArrayList class to receive credit.
 	 */
-	public static int problem4(ArrayList<String> l) {
+	public static void problem4(ArrayList<String> l) {
 
 	}
 
@@ -54,7 +54,7 @@ public class Homework16 {
 			 System.out.println("Pass 2");
 		 }
 
-		 ArrayList<String> m = prolem3(l);
+		 ArrayList<String> m = problem3(l);
 		 if (!l.get(1).equals(m.get(1))) {
 			 System.out.println("Fail 3.1");
 			 passed = false;
@@ -78,14 +78,14 @@ public class Homework16 {
 			 n.add(i);
 		 }
 		 problem5(m, n);
-		 if (m.get(3) != "0") {
+		 if (!m.get(3).equals("0")) {
 			 System.out.println("Fail 5.1");
 			 passed = false;
-		 } else if (m.get(8) != "5") {
+		 } else if (!m.get(8).equals("5")) {
 			 System.out.println("Fail 5.2");
 			 passed = false;
 		 } else {
-			 System.out.println("Pass");
+			 System.out.println("Pass 5");
 		 }
 
 		 if (passed) {
